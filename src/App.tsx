@@ -1,10 +1,16 @@
 import { HeaderComponent } from "./components/Header/HeaderComponent";
+import { MainComponent } from "./components/MainContent/MainComponent";
 
 function App() {
   return (
-    <section className="!max-w-screen min-h-screen bg-[--bg-landing-page-primary-color]">
-      <HeaderComponent />
-    </section>
+    <div className="!max-w-screen min-h-screen bg-[--bg-landing-page-primary-color] flex flex-col">
+      <section className="max-w-screen">
+        <HeaderComponent />
+      </section>
+      <section className="max-w-screen">
+        <MainComponent />
+      </section>
+    </div>
   );
 }
 

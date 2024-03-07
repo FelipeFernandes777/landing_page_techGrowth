@@ -7,7 +7,7 @@ interface HeaderContainerProps {
 export function HeaderContainer({ children }: HeaderContainerProps) {
 
   return (
-    <header className="w-full h-[700px]" >
+    <header className="w-full h-[800px] relative" >
       {children}
     </header >
   )
