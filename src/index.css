@@ -14,6 +14,7 @@ html {
 :root {
   --header-primary-color: #002877ff;
   --header-secundary-color: #1274f6ff;
+  --icon-color-primary: rgba(18, 117, 246, 0.61);
 
   --bg-landing-page-primary-color: #f6f6f6ff;
   --bg-landing-page-secundary-color: #ffffff;
