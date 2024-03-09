@@ -14,4 +14,3 @@ export default function infoContainer({ children, bg_color, customizeHeight }: I
     </div>
   )
 }
-
