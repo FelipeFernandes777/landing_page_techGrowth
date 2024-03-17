@@ -13,6 +13,7 @@ html {
 
 :root {
   --header-primary-color: #002877ff;
+  --button-primary-color-hover: rgba(0, 40, 119, 0.836);
   --header-secundary-color: #1274f6ff;
   --icon-color-primary: rgba(18, 117, 246, 0.61);
 
