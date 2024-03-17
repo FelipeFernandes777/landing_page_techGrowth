@@ -13,6 +13,7 @@ import { TextField } from "@mui/material";
 interface InfoCardProps {
   icon: ReactElement;
   infoText: string;
+  size: number;
 }
 
 interface ServiceContainerInfoProps {
@@ -65,15 +66,18 @@ export function MainComponent() {
   const infoCards = [
     {
       icon: <Clock size={50} color="rgba(18, 117, 246, 0.61)" />,
-      infoText: "Adicionar descrição texto teste de quebra de linha",
+      infoText: "Entregamos resultados com rapidez e excelência!",
+      size: 16,
     },
     {
       icon: <ListTodo size={50} color="rgba(18, 117, 246, 0.61)" />,
       infoText: "Adicionar descrição texto teste de quebra de linha",
+      size: 16,
     },
     {
       icon: <BarChart4 size={50} color="rgba(18, 117, 246, 0.61)" />,
-      infoText: "Adicionar descrição texto teste de quebra de linha",
+      infoText: "Impulsionando o crescimento empresarial!",
+      size: 16,
     },
   ];
 
@@ -94,13 +98,10 @@ export function MainComponent() {
     <MainContainer>
       <section className="!max-w-screen h-fit flex flex-col">
         <Container bg_color="white" customizeHeight="300">
-          <InfoTitle>Adicionar o titulo</InfoTitle>
+          <InfoTitle>Quem somos?</InfoTitle>
           <div className="w-[700px] align-baseline">
-            <InfoText>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              officia sunt cum at? Atque neque harum debitis suscipit pariatur
-              iure. Expedita illo voluptas nisi itaque porro ipsa, incidunt
-              molestiae aliquam?
+            <InfoText size={16}>
+              Somos uma empresa dedicada à resolução de problemas empresariais e residenciais, oferecendo uma ampla gama de serviços. Desde a criação de sites até a infraestrutura de redes e Wi-Fi corporativo, incluindo automação de planilhas. Também realizamos montagem e manutenção de computadores, instalação de softwares e outras configurações essenciais. Nosso compromisso é fornecer soluções abrangentes e eficazes, garantindo eficiência e satisfação aos nossos clientes.
             </InfoText>
           </div>
         </Container>
@@ -112,7 +113,7 @@ export function MainComponent() {
                 infoCards.map((card: InfoCardProps, index: number) => {
                   return (
                     <div key={index}>
-                      <InfoCard icon={card.icon} infoText={card.infoText} />
+                      <InfoCard icon={card.icon} infoText={card.infoText} size={card.size} />
                     </div>
                   );
                 })}
