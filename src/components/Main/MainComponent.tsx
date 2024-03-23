@@ -1,4 +1,4 @@
-import { BarChart4, Gauge, ListTodo, Mail, Phone, ReceiptText, User } from "lucide-react";
+import { BarChart4, Gauge, ListTodo, Mail, MessageCircle, Phone, ReceiptText, User } from "lucide-react";
 import InfoCard from "./Info/InfoCard";
 import Container from "./Container";
 import InfoText from "./Info/InfoText";
@@ -201,10 +201,10 @@ export function MainComponent() {
           </div>
         </Container>
         <Container
-          customizeHeight="450"
+          customizeHeight="650"
           bg_color="white"
         >
-          <form method="post" onSubmit={onSubmitForm} className="p-4 bg-white rounded-md shadow-md shadow-white gap-5 w-2/5 h-full flex flex-col items-center">
+          <form method="post" onSubmit={onSubmitForm} className="p-4 bg-white rounded-md shadow-md shadow-white gap-5 w-2/5 h-full flex flex-col items-center overflow-hidden">
             <div className="w-full flex flex-col items-center justify-center gap-5">
               <InfoTitle>Entre em contato</InfoTitle>
               <InfoText>Pronto para transformar sua visão em realidade? Deixe-nos ajudá-lo a alcançar o sucesso! Preencha o formulário abaixo e comece sua jornada conosco hoje mesmo</InfoText>
@@ -242,7 +242,9 @@ export function MainComponent() {
                     cellPhone: event.target.value
                   }))} />
             </div>
-
+            <div className="w-[500px] h-[200px] flex gap-3 overflow-hidden">
+              <textarea placeholder="Nós envie a sua solicitação." maxLength={255} minLength={10} rows={10} className="focus:border-none focus:rounded-md w-full h-full !max-h-[200px] border border-black rounded-md p-2 shadow-md"></textarea>
+            </div>
             <button className="rounded-xl shadow-md shadow-white w-[200px] p-3 h-[100px] bg-[--header-primary-color] hover:bg-[--button-primary-color-hover]">
               <span className="text-white">Enviar dados</span>
             </button>
@@ -252,6 +254,6 @@ export function MainComponent() {
       <footer className="w-full h-[200px] border-t-[1px] border-[#f6f6f6] bg-white flex items-center justify-center">
 
       </footer>
-    </MainContainer>
+    </MainContainer >
   );
 }
